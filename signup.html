@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Tourism Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1 class="navbar-title">Tourism Management System</h1>
+        <div>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" style="display: block;"> <!-- Display the modal by default -->
+        <div class="modal-content">
+            <h2>Sign Up</h2>
+            <form id="signupForm" onsubmit="return handleSignup(event);">
+                <div class="form-group">
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" name="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="toggle">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle signup form submission
+        function handleSignup(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can add your signup logic
+            alert('Sign up successful! You can now log in.');
+            window.location.href = 'login.html'; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

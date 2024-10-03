@@ -1,0 +1,290 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/travel.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(71, 162, 183, 0.8); /* Darker background for contrast */
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-title {
+    color: #FFD700; /* Gold color for the title */
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight highlight effect */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Updated input styles */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 80%; /* Decrease width to make it smaller */
+    max-width: 300px; /* Set a maximum width */
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add transitions for effects */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow effect */
+}
+
+button {
+    width: 80%; /* Match the button width with input boxes */
+    max-width: 300px; /* Set a maximum width */
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Add transitions for effects */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.toggle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-message {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+.content {
+    padding: 20px;
+    max-width: 800px; /* Maximum width for content */
+    margin: auto; /* Center the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    border-radius: 10px; /* Rounded corners for content area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+h2 {
+    color: #007BFF; /* Primary color for headings */
+    text-align: center; /* Centered heading */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 80%; /* Same width as input fields */
+    max-width: 300px; /* Set maximum width */
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px; /* Padding for text area */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add transitions */
+}
+
+textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow effect */
+}
+
+footer {
+    text-align: center; /* Centered footer text */
+    padding: 10px 0; /* Vertical padding */
+    margin-top: 20px; /* Space above footer */
+    color: #555; /* Darker color for footer */
+}
+
+
+.locations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between location items */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.location-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Width of each location item */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.location-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/travel.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.navbar {
+    background-color: rgba(71, 162, 183, 0.8);
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-title {
+    color: #FFD700;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-item {
+    margin-bottom: 20px;
+}
+
+.book-now {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-now:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(71, 162, 183, 0.8);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+

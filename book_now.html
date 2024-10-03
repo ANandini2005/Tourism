@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Tourism Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const location = urlParams.get('location');
+            document.getElementById('location').value = location || '';
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="navbar-title">Tourism Management System</h1>
+        <div class="navbar-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="locations.html">Locations</a>
+            <a href="logout.html">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Booking Form</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Select Location:</label>
+                <select id="location" required>
+                    <option value="Taj Mahal">Taj Mahal, Agra</option>
+                    <option value="Jaipur">Jaipur, Rajasthan</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Kerala Backwaters">Kerala Backwaters</option>
+                    <option value="Hampi">Hampi, Karnataka</option>
+                    <option value="Leh-Ladakh">Leh-Ladakh</option>
+                    <option value="Udaipur">Udaipur, Rajasthan</option>
+                    <option value="Ranthambore">Ranthambore National Park</option>
+                    <option value="Andaman">Andaman and Nicobar Islands</option>
+                    <option value="Ajanta">Ajanta and Ellora Caves</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Booking Date:</label>
+                <input type="date" id="date" required>
+            </div>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</body>
+</html>
